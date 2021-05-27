@@ -1,0 +1,46 @@
+.formTitle {
+    text-align: center;
+}
+
+.form-label {
+    color: $text-white-color;
+    font-size: 1.3rem;
+    font-family: 'Raleway';
+    font-style: italic;
+}
+
+.form-control {
+    margin-bottom:30px !important;
+    transition: all .5s !important;
+    &:focus {
+        border: 5px solid rgb(255, 136, 0) !important;
+        width: 120% !important;
+        background: rgba(238, 234, 220, 0.945) !important;
+    }
+}
+
+.btn-success {
+    color: $text-black-color !important;
+    background-color: $text-og-color !important;
+    font-family: 'Montserrat' !important;
+    border-color: $text-og-color !important;
+    font-weight: 600 !important;
+
+    &:hover {
+        background-color: $text-aq-color !important;
+        border-color: $text-aq-color !important;
+    }
+}
+
+.btn-warning {
+    color: $text-black-color !important;
+    background-color: $text-og-color !important;
+    font-family: 'Montserrat' !important;
+    border-color: $text-og-color !important;
+    font-weight: 600 !important;
+
+    &:hover {
+        background-color: $text-aq-color !important;
+        border-color: $text-aq-color !important;
+    }
+}

@@ -1,0 +1,869 @@
+/* normalizando margenes y rellenos */
+* {    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style-type: none;
+    
+}
+
+html{
+    font-size: 1rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+/* contenedora secciones principales */
+
+/* cabezal */
+
+.header {
+    text-align: center;
+    font-weight: bold;
+    background: #FFFFFF;
+    /* display:flex;
+    flex-direction : row;
+    align-items: center; */
+    /* justify-content: space-between; */
+    height: 30vh;
+    
+}
+
+.header img {
+    padding-left: 5rem;
+    position: sticky;
+}
+
+/* Navegacion */
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBarContent {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.navBarContent span { 
+    color: black;
+    font-family: 'Raleway';
+}
+
+/*////////////Menu///////////////*/
+
+#menu ul {
+    background-color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#menu ul li {
+    position: relative;
+    padding-left: 1rem;
+    border-right: 3px solid black;
+    text-decoration: none;
+}
+
+#menu ul li a span {
+    transition: color .7s;
+}
+
+#menu ul li a span:hover {
+    color: turquoise;
+}
+
+#menu ul li ul li {
+    border: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    transition: visibility .5s ease-in-out;
+}
+
+#menu ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+}
+
+#menu ul li:hover>ul {
+    visibility: visible;
+    width: 10rem;
+}
+
+
+/* Quienes Somos */
+
+.quienesSomos {
+    width: 100vw;
+    padding: 4rem 0 5rem 0;
+    background-color: black;
+    color: white;
+    padding: 2rem;
+}
+
+.quienesSomos h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color 1s;
+}
+
+.quienesSomos:hover {
+    color:rgb(233, 157, 42);
+}
+
+.quienesSomos p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 0 12rem 0 12rem;
+    line-height: 2rem;
+    text-align: justify;
+    transition: color 1s;
+}
+
+/* SLIDER */
+
+.sliderImg {
+    height: 90vh;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block;
+}
+
+.sliderImg img {    
+    height: 90vh;
+    width: 100vw;
+}
+
+.slideTitle, .lastSlideTitle {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.slideSubTitle, .lastSlideSubTitle {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.lastSlideTitle {
+    color:#FFF
+}
+
+.lastSlideSubTitle {
+    color: #FFF;
+}
+
+/* Objetivos  */
+
+.objetivos {
+    background: white;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 !important;
+    
+}
+
+.ordenProyectos {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.back {
+    height: 100%;
+    font-family: 'Raleway';
+}
+
+.back:hover {
+    background-color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    transition: 0.7s;
+}
+
+.back:hover h3 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid orange;
+}
+
+.procesoTitulos {
+    font-weight: 700 !important;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 100;
+    padding-top: 2rem;
+    /*padding-bottom: 1rem; */
+}
+
+.objetivosDescripcion {
+    padding: 2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.objetivosDescripcion p {
+    padding: 2rem;
+    margin-top: 3rem;
+    line-height: 2rem;
+    text-align: justifya;
+}
+
+.objetivosDescripcion li {
+    padding-left: 2rem;
+    list-style-position: outside;
+    list-style-type: disclosure-closed;
+    text-align: justify;
+    line-height: 2rem;;
+}
+
+.serviciosTitulo {
+    text-align: center;
+    color: white;
+    background: black;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    font-family: 'Raleway', sans-serif;   
+}
+
+/* Proyecto individual Grids */
+
+.gridProyect { 
+    font-family: 'Raleway';
+    background-color: #000000;
+    width: auto;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 20vh 50vh 10vh;
+    color: white;
+    grid-template-areas: 
+    "proyNom frase imgProy "
+    "proyNom descripcion imgProy"
+    "proyNom descripcion imgProy";
+}
+
+.imagenProyecto1Grid {
+    background-image: url(../images/proy1.jpg);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+    border-top: 2px solid black;
+}
+
+.imagenProyecto2Grid {
+    background-image: url(../images/proy2.jpg);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagenProyecto3Grid {
+    background-image: url(../images/proy.png);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+    border-top: 2px solid black;
+}
+
+.tituloGridProyecto {
+    text-align: center;
+    color: #FFFFFF;
+    grid-area: proyNom;
+    padding-top: 30vh;
+}
+
+.subtituloGridProyecto {
+    grid-area: frase;
+    color: white;
+    padding-left: 15vw;
+    padding-top: 10vh;
+}
+
+.descripcionGridProyecto {
+    grid-area: descripcion;
+    padding: 15vh 5rem 0 5rem;
+    line-height: 30px;
+}
+
+.grid a {
+    margin-top: 30px;
+    color: white;
+    background: purple;
+    width: 5rem;
+    height: 2rem;
+}
+
+.subtituloProyecto {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+/* Servicios.html grid */
+
+.gridService {
+    font-family: 'Raleway';
+    background-color: #000000;
+    width: auto;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
+    color: white;
+    grid-template-areas: 
+    "analisis diseno construccion prueba";
+}
+
+.gridService img {
+    padding-bottom: 50px;
+    width: 14rem;
+    height: 11rem;
+}
+
+.gridService h1 {
+    font-size: 1.5rem;
+}
+
+.gridService article:hover>h1 {
+    color: orange;
+}
+
+.anali {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: analisis;
+}
+
+.dis {
+    grid-area: diseno;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.con {
+    grid-area: construccion;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pru {
+    grid-area: prueba;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nosotros, trabajo, contacto, ayuda*/
+
+.principal {
+    font-family: 'Raleway', sans-serif;
+    background-color: #000000;
+    padding-bottom: 50px;
+}
+
+.principal h1{
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.principal p {
+    color: #FFFFFF;
+}
+
+.proyectos{
+    text-align: center;
+    background-size: contain;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    height: 30rem;
+}
+
+.proyectosMain{
+    text-align: center;
+    background-size: contain;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 5rem;
+}
+
+.eachProject {
+    display:flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+}
+
+.eachProject div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.eachProject div img {
+    transition: width 1s, height 1s; 
+}
+
+.eachProject div img:hover {
+    width: 110%;
+    height: 110%;
+}
+
+
+.eachProject div a {
+    padding-top: 20px;
+}
+
+.tituloProyecto {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-family: 'Raleway';
+}
+
+.servicios {
+    text-align: center;
+    background-size: contain;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    height: 17rem;
+}
+
+.descProyecto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    width: 50%;
+    color:#35afbd;
+}
+
+.descProyecto p {
+    font-weight: 600;
+    padding: 0 5rem 0 5rem;
+    text-align: justify;
+}
+
+.proyectos h2 {
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Inicio VISION y boton VER MAS */
+
+
+.btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   text-decoration: none;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ .imgProyecto {
+    background-image: url("/resources/images/hands.jpg");
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imgProyecto h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+.eachProject img {
+    width: 50%;
+}
+
+
+/* Trabajo, Nosotros y Ayuda */ 
+
+.title {
+    text-align: center;
+}
+
+.parrafo {
+    text-align: center;
+    display:flex;
+    flex-direction : row;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+.parrafo audio {
+    width: 20rem;
+    padding-left: 5rem;
+}
+
+.parrafo video {
+    width: 35rem;
+    padding-left: 1=50rem;
+}
+
+.pAyuda { 
+    text-align: center;
+    display:flex;
+    flex-direction : row;
+    align-items: center;
+    padding-bottom: 2rem;
+    height: 10rem;
+    justify-content: space-around;
+}
+
+.pAyuda p {
+    padding: 0 3rem 0 3rem;
+}
+
+/* Pie de Pagina */
+
+.footerContainer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+.mainFooterGal {
+    display: flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: black;
+    padding: 2rem 50px 2rem 50px;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("/resources/images/bgImage.jpg");
+    font-weight: 600;
+}
+
+.mainFooterGal p {
+    font-size: .8rem;
+    color: white;
+}
+
+.mainFooterGal a {
+    transition: color 1s;
+}
+
+.mainFooterGal a:hover {
+    color: black;
+    color: black;
+}
+
+.mainFooterGal a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+.mainFooter 
+{   
+    display: flex;
+    flex-direction : row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 2rem 50px 2rem 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mainFooter p {
+    font-size: .8rem;
+}
+
+.mainFooter a {
+    transition: color 1s;
+}
+
+.mainFooter a:hover {
+    color: #15b7b9;
+}
+
+.mainFooter a:link, a:visited {
+    color: black;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 30px;
+}
+
+/* Boton to top */
+
+#button {
+    display: inline-block;
+    background-color: #0a8185;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* Formulario Contacto */
+
+.formTitle {
+    text-align: center;
+}
+
+.form-label {
+    color: white;
+}
+
+.form-control {
+    margin-bottom:30px;
+}
+
+/* .contactForm {
+   
+   display: block;
+   margin-left: 25%;
+   color: #FFF;
+   padding-bottom: 4rem;
+}
+
+input[type=text], input[type=email], input[type=tel], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+/* Media queries para pantallas medianas, chicas y grandes */
+
+@media (min-width: 350px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .header img {
+        width: 15rem;
+        padding: 0;
+        position: sticky;
+    }
+
+    .quienesSomos p{
+        padding: 1rem;
+    }
+
+    .navBar {
+        position: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBarContent {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .ordenProyectos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+        width: 100vw;
+        align-items: center;
+        border-bottom: 3px solid black;
+    }
+
+    .mainFooter {
+        flex-direction: column;
+        line-height: 35px;
+        justify-content: space-evenly;
+        align-items: center;
+        height:100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 60vh;
+    }
+
+    .header img {
+        width: 25rem;
+        padding-left: 5rem;
+        position: sticky;
+    }
+    
+    .navBar {
+        padding-top:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quienesSomos p {
+        padding: 2rem;
+    }
+
+    .navBarContent {
+        padding: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ordenProyectos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+    }
+    
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+        width: 33.3%;
+        height: 75vh;
+        border-bottom: none;
+    }
+
+    .mainFooter {
+        flex-direction: row;
+        line-height: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 5rem 0 5rem;
+    }
+
+    .quienesSomos p {
+        padding: 5rem ;
+    }
+
+    .mainFooter {
+        flex-direction: row;
+        line-height: 35px;
+    }
+
+    .navBar {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header img {
+        width: 30rem;
+        padding-left: 5rem;
+        position: sticky;
+    }
+}

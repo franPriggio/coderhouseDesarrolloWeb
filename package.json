@@ -1,0 +1,24 @@
+{
+  "name": "dwfrancopriggione15930",
+  "version": "1.0.0",
+  "description": "entregaSass",
+  "main": "index.html",
+  "scripts": {
+    "test": "test",
+    "build-css": "node-sass --include-path scss scss/style.scss resources/styles/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "---"
+  },
+  "keywords": [
+    "sassEntrega"
+  ],
+  "author": "fran",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}

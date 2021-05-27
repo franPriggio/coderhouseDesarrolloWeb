@@ -1,0 +1,28 @@
+.quienesSomos {
+    width: 100vw;
+    height: 65vh;
+    padding: $def-size*4 0 $def-size*5 0;
+    background-color: $bg-black-color;
+    color: $text-white-color;
+    padding: $def-size*2;
+
+    &:hover {
+        color:$hover-color-orange;
+    }
+
+    .quienesSomos__titulo {
+        font-size: $def-size*3.5;
+        margin-bottom: $def-size*2;
+        text-align: center;
+        transition: color 1s;
+    }    
+
+    .quienesSomos__descripcion {
+        font-family: 'Montserrat', sans-serif;
+        font-size: $def-size;
+        padding: $def-size*2 $def-size*10 $def-size*2 $def-size*10;
+        line-height: $def-size*2;
+        text-align: justify;
+        transition: color 1s;
+    }
+}

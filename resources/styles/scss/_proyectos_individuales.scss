@@ -1,0 +1,92 @@
+.gridProyect { 
+    font-family: 'Raleway';
+    background-color: $bg-black-color;
+    width: auto;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-rows: 20vh 50vh 10vh;
+    color: $text-white-color;
+    grid-template-areas: 
+    "proyNom frase imgProy "
+    "proyNom descripcion imgProy"
+    "proyNom descripcion imgProy";
+
+    &:hover .tituloGridProyecto {
+        color:$text-og-color;
+        font-size: $def-size*3;
+    }
+
+    &:hover .subtituloGridProyecto {
+        color: $hover-color-turquoise;
+        font-size: $def-size*2;
+    }
+
+    &:hover .descripcionGridProyecto {
+        color:$text-aq-color;
+        font-size: $def-size*2.5;
+        font-family: 'Raleway';
+        text-align: justify;
+        font-style: italic;
+    }
+
+    .tituloGridProyecto {
+        text-align: center;
+        color: $text-white-color;
+        grid-area: proyNom;
+        padding-top: 30vh;
+        transition: all .5s;
+    }
+
+    .subtituloGridProyecto {
+        grid-area: frase;
+        color: $text-white-color;
+        padding-left: 15vw;
+        padding-top: 10vh;
+        transition: all .5s;
+    }
+
+    .descripcionGridProyecto {
+        grid-area: descripcion;
+        padding: $def-size*2 $def-size*5 0 $def-size*5;
+        line-height: 30px;
+        transition: all .5s;
+    }
+}
+
+.imagenProyecto1Grid {
+    background-image: url(/resources/images/proy1.jpg);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+    border-top: 2px solid black;
+}
+
+.imagenProyecto2Grid {
+    background-image: url(/resources/images/proy.jpg);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+}
+
+.imagenProyecto3Grid {
+    background-image: url(/resources/images/desarrollo.jpeg);
+    grid-area: imgProy;
+    background-position: center;
+    background-size: cover;
+    border-top: 2px solid black;
+}
+
+
+.grid a {
+    margin-top: 30px;
+    color: $text-white-color;
+    background: $text-purple-color;
+    width: $def-size*5;
+    height: $def-size*2;
+}
+
+.subtituloProyecto {
+    color: $text-white-color;
+    margin-bottom: $def-size;
+}

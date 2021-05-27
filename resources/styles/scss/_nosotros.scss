@@ -1,0 +1,39 @@
+.nosotros {
+    
+    background-color: $bg-black-color;
+    padding-bottom: 50px;
+
+
+    h1 {
+        text-align: center;
+        color: $text-white-color;
+        padding-top: $def-size*2;
+        padding-bottom: $def-size*4;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    p {
+        color: $text-white-color;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .parrafo {
+        @include flex(flex, row, center , space-around);
+        text-align: center;
+        margin-top: $def-size*2;
+
+        audio {
+            width: $def-size*20;
+            padding-left: $def-size;
+        }
+
+        video {
+            width: $def-size*35;
+            padding-left: $def-size;
+            margin-left: $def-size*15;
+        }
+    }
+}

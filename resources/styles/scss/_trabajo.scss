@@ -1,0 +1,11 @@
+.pAyuda { 
+    text-align: center;
+    @include flex(flex, row, center , space-around);
+    padding-bottom: $def-size*2;
+    height: $def-size*10;
+
+    p {
+        padding: 0 $def-size*3 0 $def-size*3;
+        color: $text-white-color;
+    }
+}

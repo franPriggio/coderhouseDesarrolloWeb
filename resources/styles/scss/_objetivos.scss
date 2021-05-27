@@ -1,0 +1,65 @@
+.objetivos {
+    background: $bg-black-color;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 !important;
+    
+    .ordenObjetivos {
+        @include flex(flex, row, center , center);
+        margin: 0 !important;
+        padding: 0 !important;
+
+        .back {
+            height: 100%;
+            font-family: 'Raleway';
+            color:$bg-white-color;
+            transition: all 0.7s;
+
+            .procesoTitulos {
+                font-weight: 700 !important;
+                font-size: $def-size*1.5;
+                font-style: italic;
+                font-weight: 100;
+                padding-top: $def-size*2;
+                margin-left: 70px;
+                margin-right: 70px;
+                text-align: center;
+            }
+
+            .objetivosDescripcion {
+                padding: $def-size*2;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 500;
+                text-align: justify;
+
+                p {
+                    padding: $def-size*2;
+                    margin-top: $def-size*3;
+                    line-height: $def-size*2;
+                    text-align: justify;
+                }
+
+                li {
+                    padding-left: $def-size*2;
+                    list-style-position: outside;
+                    list-style-type: disclosure-closed;
+                    text-align: justify;
+                    line-height: $def-size*2;
+                }
+            }
+
+            &:hover {
+                background-color: $bg-white-color;
+                font-family: 'Montserrat', sans-serif;
+                color: $text-black-color;
+            }
+            
+            &:hover h3 {
+                padding-bottom: 15px;
+                border-bottom: 2px solid orange;
+            }
+            
+        }
+        
+        
+    }
+}

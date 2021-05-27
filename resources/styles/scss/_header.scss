@@ -1,0 +1,81 @@
+.header {
+
+    text-align: center;
+    font-weight: bold;
+    background: $bg-white-color;
+    @include flex(flex, row, center, space-between);
+    margin-bottom: $def-size*4;
+    height: 30vh;
+    
+    .header__img {
+        width: $def-size*24;
+        position: absolute;
+        top: $def-size*-5.5;
+        left: $def-size*8;
+    }
+
+    .header__navBar {
+        
+        .header__navBar__menu {
+
+            .header__navBar__menu__ul {
+    
+                background-color: $bg-white-color;
+                list-style: none;
+                @include flex(flex, row, '', '' );
+
+                .header__navBar__menu__ul__li {
+                    position: relative;
+                    padding-left: $def-size;
+                    padding-right: $def-size;
+                    border-right: 3px solid $bg-black-color;
+                    text-decoration: none;
+                    font-family: 'Raleway';
+                    color: $text-black-color;
+                    
+                    .header__navBar__menu__ul__li__a span {
+                        transition: color .3s;
+                        color: $text-black-color;
+                        
+
+                        &:hover {
+                            color: $hover-color-turquoise;
+                        }
+                    }
+
+                    .header__navBar__menu__ul__li__ul {
+                        visibility: hidden;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        padding:$def-size 0;
+                        @include flex(flex, row, '', '');
+
+                        .header__navBar__menu__ul__li__ul__li {
+                            border: none;
+                            padding: $def-size;
+                            color: $text-black-color;
+                            width: $def-size*30;
+                            
+                            .header__navBar__menu__ul__li__ul__li__span {
+                                &:hover {
+                                    transition: color .3s;
+                                    color: $hover-color-turquoise;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover{
+
+                        ul {
+                            visibility: visible;
+                            width: $def-size*27;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

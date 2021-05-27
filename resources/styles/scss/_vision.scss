@@ -1,0 +1,58 @@
+.vision{
+    text-align: center;
+    background-size: contain;
+    color: $text-white-color;
+    @include flex(flex, row, '', '');
+    font-family: 'Montserrat', sans-serif;
+    height: $def-size*30;
+
+    .vision__visionImg {
+        background-image: url("/resources/images/hands.jpg");
+        background-size: cover;
+        width: 50%;
+        @include flex(flex, column, center , space-evenly);
+
+        .vision__visionImg__titulo {
+            text-align: center;
+            text-transform: uppercase;
+            padding: $def-size*2;
+        }
+    }
+
+    .vision__visionDesc {
+        @include flex(flex, column, center , space-evenly);
+        background-color: $bg-white-color;
+        width: 50%;
+        color:#35afbd;
+
+        .vision__visionDesc__frase {
+            font-weight: 600;
+            padding: 0 $def-size*5 0 $def-size*5;
+            text-align: justify;
+        }
+
+
+        .vision__visionDesc__btngrad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            text-decoration: none;
+            background-size: 200% auto;
+            color: $text-white-color;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+            
+            &:hover {
+                    background-position: right center; /* change the direction of the change here */
+                    color: $text-white-color;
+                    text-decoration: none;
+                }
+        }
+
+        
+    }
+}
