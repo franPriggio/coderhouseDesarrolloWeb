@@ -12,7 +12,7 @@
             height: 100%;
             font-family: 'Raleway';
             color:$bg-white-color;
-            transition: all 0.7s;
+            transition: all 1s;
 
             .procesoTitulos {
                 font-weight: 700 !important;
@@ -48,9 +48,8 @@
             }
 
             &:hover {
-                background-color: $bg-white-color;
                 font-family: 'Montserrat', sans-serif;
-                color: $text-black-color;
+                color: $text-white-color;
             }
             
             &:hover h3 {

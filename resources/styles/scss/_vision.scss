@@ -7,7 +7,6 @@
     height: $def-size*30;
 
     .vision__visionImg {
-        background-image: url('/resources/images/hands.jpg');
         background-size: cover;
         width: 50%;
         @include flex(flex, column, center , space-evenly);
@@ -29,6 +28,7 @@
             font-weight: 600;
             padding: 0 $def-size*5 0 $def-size*5;
             text-align: justify;
+            font-size: $def-size*2;
         }
 
 
