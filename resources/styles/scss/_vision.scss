@@ -7,7 +7,7 @@
     height: $def-size*30;
 
     .vision__visionImg {
-        background-image: url('/resources/images/hands.jpg');
+        background-image: url('rsources/images/hands.jpg');
         background-size: cover;
         width: 50%;
         @include flex(flex, column, center , space-evenly);
