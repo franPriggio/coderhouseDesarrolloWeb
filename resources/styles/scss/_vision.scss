@@ -12,7 +12,7 @@
         width: 50%;
         @include flex(flex, column, center , space-evenly);
 
-        .vision__visionImg__titulo {
+        .vision__visionImg__titulo { 
             text-align: center;
             text-transform: uppercase;
             padding: $def-size*2;
